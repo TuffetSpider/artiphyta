@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "artiphyta",
+	"version": "${version}",
+	"name": "artiphyta",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/artiphyta/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.tuffetspider.artiphyta.Artiphyta"
+		],
+		"client": [
+			"net.tuffetspider.artiphyta.ArtiphytaClient"
+		],
+		"fabric-datagen": [
+			"net.tuffetspider.artiphyta.ArtiphytaDataGenerator"
+		]
+	},
+	"mixins": [
+		"artiphyta.mixins.json",
+		{
+			"config": "artiphyta.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
